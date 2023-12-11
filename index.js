@@ -2,10 +2,11 @@
 
 // Your task is to write JavaScript code that analyzes the records to calculate each of the following:
 
-// !The total number of months included in the dataset.
+//!The total number of months included in the dataset.
   // !finances.length
+//! The net total amount of Profit / Losses over the entire period.
 
-// The net total amount of Profit / Losses over the entire period.
+
   // Need a variable for Profits/Losses
   // Need to be able to compare the data for the loop that we're on to the data from the previous loop
     // Need variables for current & previous once we start the loop
@@ -132,7 +133,21 @@ var finances = [
 //! The total number of months included in the dataset.
   //! finances.length
 
-  console.log(`Financial Analysis 
+console.log(`Financial Analysis 
 ----------------`)
 
-  console.log(`Total Months: ${finances.length}`)
+console.log(`Total Months: ${finances.length}`)
+
+
+//! The net total amount of Profit / Losses over the entire period.
+
+let sum = 0
+
+for (let i = 0; i < finances.length; i++) {
+  if(typeof finances[i][1] === "number")
+  sum += finances[i][1];
+} 
+
+console.log(`Total: $${sum}`)
+
+
