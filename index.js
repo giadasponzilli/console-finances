@@ -2,8 +2,8 @@
 
 // Your task is to write JavaScript code that analyzes the records to calculate each of the following:
 
-// The total number of months included in the dataset.
-  // finances.length
+// !The total number of months included in the dataset.
+  // !finances.length
 
 // The net total amount of Profit / Losses over the entire period.
   // Need a variable for Profits/Losses
@@ -128,3 +128,11 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+//! The total number of months included in the dataset.
+  //! finances.length
+
+  console.log(`Financial Analysis 
+----------------`)
+
+  console.log(`Total Months: ${finances.length}`)
