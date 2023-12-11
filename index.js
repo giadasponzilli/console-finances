@@ -141,13 +141,38 @@ console.log(`Total Months: ${finances.length}`)
 
 //! The net total amount of Profit / Losses over the entire period.
 
-let sum = 0
+let totalSum = 0
 
 for (let i = 0; i < finances.length; i++) {
   if(typeof finances[i][1] === "number")
-  sum += finances[i][1];
+  totalSum += finances[i][1];
 } 
 
-console.log(`Total: $${sum}`)
+console.log(`Total: $${totalSum}`)
 
+
+//! The average of the changes in Profit/Losses over the entire period.
+//! Total change in Profit/Losses from month to month and then find the average.
+//! (Total/(Number of months - 1))
+//! Print average change to the nearest 100th
+
+let financesChanges = [];
+
+for (let i = 1; i < finances.length; i++) {
+  let difference = finances[i][1] - finances [i - 1][1];
+  financesChanges.push(difference);
+}
+
+
+let financesChangesSum = 0
+
+for (let i = 0; i < financesChanges.length; i++) {
+  financesChangesSum += financesChanges[i];
+} 
+
+let changeAverage = (financesChangesSum / (finances.length - 1))
+
+let changeAverageRound = Math.round(changeAverage*100) / 100
+
+console.log(`Average Change: ${changeAverageRound}`)
 
