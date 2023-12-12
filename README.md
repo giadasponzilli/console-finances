@@ -16,6 +16,8 @@ The code is deployed at https://giadasponzilli.github.io/console-finances/
 
 ## Screenshots
 
+![Alt text](<Images/Console-Finances App Screensot.png>)
+
 ## Installation
 
 N/A
