@@ -120,7 +120,6 @@ for (let i = 1; i < finances.length; i++) {
   financesChanges.push(difference);
 }
 
-
 let financesChangesSum = 0
 
 for (let i = 0; i < financesChanges.length; i++) {
@@ -151,5 +150,18 @@ let monthWithGreatestIncrease;
 console.log(`Greatest Increase in Profits/Losses: ${monthWithGreatestIncrease} (${greatestIncrease})`)
 
 
-// The greatest decrease in Profit / Losses(date and amount) over the entire period.
+//! The greatest decrease in Profit / Losses(date and amount) over the entire period.
+
+let greatestDecrease = 0
+let monthWithGreatestDecrease;
+
+  for (let i = 1; i < finances.length; i++) {
+    let difference = finances[i][1] - finances [i - 1][1];
+    if (difference < greatestDecrease){
+    greatestDecrease = difference
+    monthWithGreatestDecrease = finances[i][0]
+    }
+  }
+
+console.log(`Greatest Decrease in Profits/Losses: ${monthWithGreatestDecrease} (${greatestDecrease})`)
 
