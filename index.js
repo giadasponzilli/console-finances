@@ -147,7 +147,7 @@ let monthWithGreatestIncrease;
     }
   }
 
-console.log(`Greatest Increase in Profits/Losses: ${monthWithGreatestIncrease} (${greatestIncrease})`)
+console.log(`Greatest Increase in Profits/Losses: ${monthWithGreatestIncrease} ($${greatestIncrease})`)
 
 
 //! The greatest decrease in Profit / Losses(date and amount) over the entire period.
@@ -163,5 +163,5 @@ let monthWithGreatestDecrease;
     }
   }
 
-console.log(`Greatest Decrease in Profits/Losses: ${monthWithGreatestDecrease} (${greatestDecrease})`)
+console.log(`Greatest Decrease in Profits/Losses: ${monthWithGreatestDecrease} ($${greatestDecrease})`)
 
